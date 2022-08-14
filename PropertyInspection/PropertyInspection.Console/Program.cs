@@ -20,7 +20,7 @@ var builder = Host.CreateDefaultBuilder()
     }).Build();
 
 var service = builder.Services.GetRequiredService<IInspectorService>();
-service.AddInspector();
+service.Test();
 
 
 builder.Run();

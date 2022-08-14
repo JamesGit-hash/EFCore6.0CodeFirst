@@ -10,13 +10,32 @@ public class InspectorService : IInspectorService
         _context = context;
     }
 
-    public void AddInspector()
+    public void Test()
     {
-        _context.Inspectors.Add(new Inspector
-        {
-            Name = "James"
-        });
+        //_context.Inspectors.Add(new Inspector
+        //{
+        //    Name = "James"
+        //});
 
+        //_context.SaveChanges();
+
+        var agent = new Agent
+        {
+            Name = "Tony"
+        };
+        _context.Agents.Add(agent);
+        _context.SaveChanges();
+
+
+        var property = new PropertyTest
+        {
+            AgentRefId = agent.Id,
+            OwnerName = "James",
+            PostCode = 1,
+            StreetAddress = "1 James St"
+        };
+
+        _context.Properties.Add(property);
         _context.SaveChanges();
     }
 }

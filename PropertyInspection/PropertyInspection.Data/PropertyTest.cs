@@ -25,5 +25,9 @@ namespace PropertyInspection.Data
 
         [MaxLength(50)]
         public string OwnerName { get; set; }
+
+        public int PostCode { get; set; }
+
+        public DateTime CreatedTime { get; set; }
     }
 }
