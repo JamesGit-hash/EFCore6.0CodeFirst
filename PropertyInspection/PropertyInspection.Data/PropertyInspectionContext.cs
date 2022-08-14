@@ -10,5 +10,6 @@ namespace PropertyInspection.Data
         }
 
         public DbSet<Inspector> Inspectors { get; set; }
+        public DbSet<Agent> Agents { get; set; }
     }
 }
